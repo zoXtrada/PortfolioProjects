@@ -6,8 +6,15 @@ SELECT *
 FROM PortfolioProject..CovidVaccinations
 ORDER BY 3,4
 
+-- Update Data Types for calculations
+ALTER TABLE CovidDeaths
+ALTER COLUMN population numeric
+
 ALTER TABLE CovidDeaths
 ALTER COLUMN total_cases numeric
+
+ALTER TABLE CovidDeaths
+ALTER COLUMN total_deaths numeric
 
 ALTER TABLE CovidVaccinations
 ALTER COLUMN new_vaccinations numeric
